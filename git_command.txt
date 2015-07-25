@@ -34,8 +34,11 @@ git rm file //将文件从版本库中删除
 ssh-keygen -t rsa -C "chenwf0519@163.com" //创建SSH Key github网站需要生成的公钥
 
 添加远程库
-git remote add origin https://github.com/shesai0519/mygit.gitgit //添加远程库
+git remote add origin https://github.com/shesai0519/mygit.git //添加远程库
 
 git remote rm origin //git 远程的 orgin  删除掉
 
 git push -u origin master /推送本地库至远程库
+
+从远程库克隆
+git clone https://github.com/shesai0519/myclone.git //克隆远程库至本地
