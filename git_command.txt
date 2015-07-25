@@ -1,0 +1,41 @@
+安装Git
+git config --global user.name "your name" //设置git用户
+git config --global user.email "email@example.com" //设置git邮箱
+
+创建版本库
+cd d\:mygit //打开版本库所在目录
+git init git //初始化，会创建一个.git（版本库）文件夹
+
+git add readme.txt //将文件添加到暂存区
+git commit -m "wrote a readme file" //将文件提交到版本库
+
+时光机穿梭
+git status 查看git状态
+git diff readme.txt //查看文件的不同
+
+版本回退
+git log //查看操作日志
+git log --pretty=oneline //查看操作日志，且每条日志显示为一行
+
+git reset --hard HEAD^ //回退到上一版本。在git中用HEAD表示当前版本，上一版本就是HEAD^，上上版本是HEAD^^，上100个版本为HEAD~100.
+
+git reset --hard 0c120fe //回退到上版本ID为0c120fe的版本
+
+git reflog //用来记录每一次命令
+
+撤销修改
+git checkout -- file //丢弃攻过去的修改
+gitreset HEAD file //把暂存区的修改撤销掉
+
+删除文件
+git rm file //将文件从版本库中删除
+
+远程仓库
+ssh-keygen -t rsa -C "chenwf0519@163.com" //创建SSH Key github网站需要生成的公钥
+
+添加远程库
+git remote add origin https://github.com/shesai0519/mygit.gitgit //添加远程库
+
+git remote rm origin //git 远程的 orgin  删除掉
+
+git push -u origin master /推送本地库至远程库
