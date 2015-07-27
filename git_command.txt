@@ -55,6 +55,7 @@ git merge dev //合并dev分支到当前分支
 
 git branch -d dev //删除dev分支
 
+<<<<<<< HEAD
 分支管理策略
 git merge --no-ff -m "merge with no-ff" dev //合并dev分支，并禁用Fast forward模式
 
@@ -89,5 +90,3 @@ git checkout -b dev origin/dev //创建远程origin的dev分支到本地
 
 git pull //从远处抓取最新的提交
 
-
-test
