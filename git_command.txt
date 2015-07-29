@@ -104,3 +104,33 @@ git tag -a <tagname> -m "blablabla..." //可以指定标签信息
 git tag -s <tagname> -m "blablabla..." //可以用PGP签名标签；
 
 git show <tagname> //查看标签信息
+
+git tag -a <name> -m "version 0.1 released" <commit id>//还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字
+
+标签管理-操作标签
+git push origin <tagname> //可以推送一个本地标签
+
+git push origin --tags //可以推送全部未推送过的本地标签
+
+git tag -d <tagname> //可以删除一个本地标签
+
+git push origin :refs/tags/<tagname> //可以删除一个远程标签，必须先在本地删除
+
+git config --global alias.st status //设置status的别名为st
+
+git config --global alias.co checkout //设置checkout的别名为co
+$ git config --global alias.ci commit //设置commit的别名为ci
+$ git config --global alias.br branch //设置branch的别名为br
+
+git last //显示最后一次提交信息
+
+搭建git服务器
+sudo apt-get install git //安装git
+
+sudo adduser git //创建一个git用户
+
+sudo git init --bare sample.git //初始化git仓库
+
+sudo chown -R git:git sample.git //把owner改为git
+
+git clone git@server:/srv/sample.git //克隆远程仓库
